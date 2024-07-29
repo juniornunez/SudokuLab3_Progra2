@@ -12,23 +12,29 @@ import java.util.Scanner;
  */
 public class Nuñez_JuniorIDClaseVariables {
     
-    public static void main(String[]args){
+    public static void main(String[] args) {
         Scanner lea=new Scanner(System.in);
-        String ParoImpar;
         /*
-        Creamos un programa que nos permita resolver una ecuacion 
-        matematica y determinar si nuestro resultado es par o es impar.
+        Creamos un programa simple que nos pide que ingresemos 3 notas, y luego calculamos el 
+        promedio de esas notas y si este es mayor al 59.5 el alumno aprueba, si no, reprueba.
         
         */
-        System.out.println("La formula es : 4a * 7b");
-        System.out.println("Ingrese su variable 'a'");
-        double a=lea.nextDouble();
-        System.out.println("Ingrese su variable 'b'");
-        double b=lea.nextDouble();
+                
+        double promediofinal;
+        String notafinal;
         
-        double resultado= (4 * a + 7 * b);
-        System.out.println("Su respuesta es: "+resultado);
-        ParoImpar= (resultado % 2==0)? "Par":"Impar";
-        System.out.println("Estado: "+ ParoImpar);
+        System.out.println("*****Ingrese las notas del alumno*****");
+        System.out.println("Ingrese notas del 0-100");
+        System.out.println("Ingrese su nota numero #1");
+        double promedio1=lea.nextDouble();
+        System.out.println("Ingrese su nota numero #2");
+        double promedio2=lea.nextDouble();
+        System.out.println("Ingrese su nota numero #3");
+        double promedio3=lea.nextDouble();
+        
+        promediofinal=(promedio1+promedio2+promedio3)/3;
+        notafinal= promediofinal >=59.5? "Aprobado": "Desaprobado";
+        System.out.println("Su promedio es de: "+promediofinal);
+        System.out.println("Estado: "+notafinal);
 }
-}
+    }
